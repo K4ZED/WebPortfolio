@@ -4,15 +4,23 @@
     <meta charset="utf-8" />
     <title>Profile Pribadi - {{ name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
   </head>
   <body data-lang="id">
     <header class="navbar">
       <div class="nav-left">
         <div class="nav-logo">
           <span class="logo-mark"></span>
-          <span class="logo-text">Kazed<span class="logo-dot">.</span></span>
+          <span class="logo-text">K4zed<span class="logo-dot">.</span></span>
         </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
       </div>
       <nav class="nav-links">
         <a href="#home">
@@ -45,6 +53,7 @@
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </header>
+
     <section id="home" class="section hero section-animate">
       <div class="hero-content">
         <p class="hero-tag">
@@ -88,39 +97,40 @@
         </div>
       </div>
       <div class="hero-avatar section-animate">
-  <div class="avatar-frame">
-    <div class="avatar-main">
-      <div class="avatar-orb">
-        <span>{{ name[0] if name }}</span>
-      </div>
-      <div class="avatar-info">
-        <p class="avatar-name">{{ name }}</p>
-        <p class="avatar-role">
-          <span class="t-id">Developer · Designer</span>
-          <span class="t-en">Developer · Designer</span>
-        </p>
-        <div class="avatar-tags">
-          <span class="tag-pill">
-            <span class="t-id">Freelance</span>
-            <span class="t-en">Freelance</span>
-          </span>
-          <span class="tag-pill">
-            <span class="t-id">Collaboration</span>
-            <span class="t-en">Collaboration</span>
-          </span>
-        </div>
-      </div>
-    </div>
-        <div class="avatar-status-row">
+        <div class="avatar-frame">
+          <div class="avatar-main">
+            <div class="avatar-orb">
+              <span>{{ name[0] if name }}</span>
+            </div>
+            <div class="avatar-info">
+              <p class="avatar-name">{{ name }}</p>
+              <p class="avatar-role">
+                <span class="t-id">Developer · Designer</span>
+                <span class="t-en">Developer · Designer</span>
+              </p>
+              <div class="avatar-tags">
+                <span class="tag-pill">
+                  <span class="t-id">Freelance</span>
+                  <span class="t-en">Freelance</span>
+                </span>
+                <span class="tag-pill">
+                  <span class="t-id">Collaboration</span>
+                  <span class="t-en">Collaboration</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="avatar-status-row">
             <span class="status-dot"></span>
             <span class="status-text">
-            <span class="t-id">Available for freelance &amp; collaboration</span>
-            <span class="t-en">Available for freelance &amp; collaboration</span>
+              <span class="t-id">Available for freelance &amp; collaboration</span>
+              <span class="t-en">Available for freelance &amp; collaboration</span>
             </span>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </section>
+
     <section id="about" class="section section-alt section-animate">
       <div class="container">
         <div class="section-header">
@@ -203,6 +213,7 @@
         </div>
       </div>
     </section>
+
     <section id="skills" class="section section-animate">
       <div class="container">
         <div class="section-header">
@@ -285,6 +296,7 @@
         </div>
       </div>
     </section>
+
     <section id="projects" class="section section-alt section-animate">
       <div class="container">
         <div class="section-header">
@@ -303,7 +315,10 @@
               <span class="project-tag">API</span>
               <span class="project-tag">System</span>
             </div>
-            <h3>Project One</h3>
+            <h3 class="project-card-title-row">
+              <span>Project One</span>
+              <span class="project-arrow">↗</span>
+            </h3>
             <p>
               <span class="t-id">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -320,7 +335,10 @@
               <span class="project-tag">Dashboard</span>
               <span class="project-tag">Data</span>
             </div>
-            <h3>Project Two</h3>
+            <h3 class="project-card-title-row">
+              <span>Project Two</span>
+              <span class="project-arrow">↗</span>
+            </h3>
             <p>
               <span class="t-id">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
@@ -339,7 +357,10 @@
               <span class="project-tag">Experiment</span>
               <span class="project-tag">UI</span>
             </div>
-            <h3>Project Three</h3>
+            <h3 class="project-card-title-row">
+              <span>Project Three</span>
+              <span class="project-arrow">↗</span>
+            </h3>
             <p>
               <span class="t-id">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -354,6 +375,7 @@
         </div>
       </div>
     </section>
+
     <section id="timeline" class="section section-animate">
       <div class="container">
         <div class="section-header">
@@ -366,7 +388,6 @@
             <span class="t-en">Timeline</span>
           </h2>
         </div>
-
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
@@ -389,7 +410,6 @@
               </p>
             </div>
           </div>
-
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-line"></div>
@@ -411,7 +431,6 @@
               </p>
             </div>
           </div>
-
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -437,6 +456,7 @@
         </div>
       </div>
     </section>
+
     <section id="contact" class="section section-alt section-animate">
       <div class="container">
         <div class="section-header">
@@ -449,7 +469,6 @@
             <span class="t-en">Contact</span>
           </h2>
         </div>
-
         <p class="section-text">
           <span class="t-id">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
@@ -460,26 +479,40 @@
             aliquam libero at leo ornare, vitae dapibus justo fringilla.
           </span>
         </p>
-
         <div class="contact-info">
           <p>
             <span class="contact-label t-id">Email</span>
             <span class="contact-label t-en">Email</span>:
-            <a href="mailto:kenzaathallah.wijaya@gmail.com">kenzaathallah.wijaya@gmail.com</a>
+            <a href="mailto:kenzaathallah.wijaya@gmail.com">
+              kenzaathallah.wijaya@gmail.com
+            </a>
           </p>
           <p>
             <span class="contact-label t-id">LinkedIn</span>
             <span class="contact-label t-en">LinkedIn</span>:
-            <a href="https://linkedin.com/in/KenzaAthallah" target="_blank">linkedin.com/in/KenzaAthallah</a>
+            <a
+              href="https://linkedin.com/in/KenzaAthallah"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/KenzaAthallah
+            </a>
           </p>
           <p>
             <span class="contact-label t-id">GitHub</span>
             <span class="contact-label t-en">GitHub</span>:
-            <a href="https://github.com/k4zed" target="_blank">github.com/k4zed</a>
+            <a
+              href="https://github.com/k4zed"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/k4zed
+            </a>
           </p>
         </div>
       </div>
     </section>
+
     <footer class="footer">
       <p>
         © {{ name }} 2025 ·
@@ -487,6 +520,11 @@
         <span class="t-en">Built with Flask &amp; a bit of JavaScript</span>
       </p>
     </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+      ↑
+    </button>
+
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>
