@@ -1,5 +1,4 @@
 :root {
-  /* Palette utama: navy & biru keabu-abuan */
   --bg: #020617;
   --bg-alt: #020b2a;
   --fg: #f9fafb;
@@ -33,7 +32,6 @@ body {
   color: var(--fg);
 }
 
-/* Language visibility */
 .t-en {
   display: none;
 }
@@ -46,7 +44,6 @@ body[data-lang="en"] .t-en {
   display: inline;
 }
 
-/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -134,7 +131,6 @@ body[data-lang="en"] .t-en {
   width: 100%;
 }
 
-/* Lang toggle */
 .lang-toggle {
   display: inline-flex;
   align-items: center;
@@ -159,7 +155,6 @@ body[data-lang="en"] .t-en {
   color: #e5edff;
 }
 
-/* Sections */
 .section {
   min-height: 80vh;
   padding: 5.5rem 7vw;
@@ -176,7 +171,6 @@ body[data-lang="en"] .t-en {
   margin: 0 auto;
 }
 
-/* Hero */
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
@@ -227,18 +221,16 @@ body[data-lang="en"] .t-en {
   gap: 0.9rem;
 }
 
-/* HERO AVATAR AREA */
 .hero-avatar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Frame kartu */
 .avatar-frame {
   position: relative;
   width: 100%;
-  max-width: 460px; /* desktop size */
+  max-width: 460px;
   padding: 1.4rem 1.6rem 1.2rem;
   border-radius: 1.7rem;
   border: 1px solid rgba(59, 130, 246, 0.65);
@@ -252,14 +244,12 @@ body[data-lang="en"] .t-en {
   overflow: hidden;
 }
 
-/* Bagian atas: orb + info */
 .avatar-main {
   display: flex;
   align-items: center;
   gap: 1.25rem;
 }
 
-/* Orb inisial */
 .avatar-orb {
   flex-shrink: 0;
   width: 110px;
@@ -283,7 +273,6 @@ body[data-lang="en"] .t-en {
   color: #020617;
 }
 
-/* Teks di samping orb */
 .avatar-info {
   min-width: 0;
 }
@@ -304,7 +293,6 @@ body[data-lang="en"] .t-en {
   color: #bfdbfe;
 }
 
-/* Tag kecil */
 .avatar-tags {
   margin-top: 0.7rem;
   display: flex;
@@ -323,7 +311,6 @@ body[data-lang="en"] .t-en {
   color: #e5edff;
 }
 
-/* Baris status bawah */
 .avatar-status-row {
   margin-top: 1.1rem;
   padding-top: 0.9rem;
@@ -351,7 +338,6 @@ body[data-lang="en"] .t-en {
   text-overflow: ellipsis;
 }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -392,7 +378,6 @@ body[data-lang="en"] .t-en {
   border-color: #1d4ed8;
 }
 
-/* Section titles */
 .section-header {
   margin-bottom: 2rem;
 }
@@ -415,7 +400,6 @@ body[data-lang="en"] .t-en {
   line-height: 1.8;
 }
 
-/* About */
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
@@ -475,7 +459,6 @@ body[data-lang="en"] .t-en {
   color: var(--fg);
 }
 
-/* Cards & grids */
 .skills-grid,
 .projects-grid {
   margin-top: 2rem;
@@ -524,7 +507,6 @@ body[data-lang="en"] .t-en {
   border-color: #60a5fa;
 }
 
-/* Pills inside cards */
 .pill-list {
   list-style: none;
   padding: 0;
@@ -542,7 +524,6 @@ body[data-lang="en"] .t-en {
   background: #020617;
 }
 
-/* Projects */
 .project-tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -560,7 +541,6 @@ body[data-lang="en"] .t-en {
   color: #bfdbfe;
 }
 
-/* Timeline */
 .timeline {
   margin-top: 2rem;
   border-left: 1px solid #1e293b;
@@ -624,7 +604,6 @@ body[data-lang="en"] .t-en {
   color: var(--muted);
 }
 
-/* Contact */
 .contact-info {
   margin-top: 1.5rem;
   color: var(--muted);
@@ -643,7 +622,6 @@ body[data-lang="en"] .t-en {
   font-weight: 500;
 }
 
-/* Footer */
 .footer {
   padding: 1.5rem 7vw 2rem;
   text-align: center;
@@ -653,7 +631,6 @@ body[data-lang="en"] .t-en {
   background: linear-gradient(to right, #020617, #020b2a);
 }
 
-/* Scroll Animations */
 .section-animate {
   opacity: 0;
   transform: translateY(32px);
@@ -667,7 +644,6 @@ body[data-lang="en"] .t-en {
   transform: translateY(0);
 }
 
-/* Floating avatar (dipakai juga sama orb) */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -680,7 +656,6 @@ body[data-lang="en"] .t-en {
   }
 }
 
-/* ===== Tablet (<= 960px) ===== */
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
@@ -724,7 +699,6 @@ body[data-lang="en"] .t-en {
   }
 }
 
-/* ===== Mobile (<= 640px) ===== */
 @media (max-width: 640px) {
   .navbar {
     padding: 0.75rem 1.25rem;
@@ -737,12 +711,10 @@ body[data-lang="en"] .t-en {
     justify-content: space-between;
   }
 
-  /* toggle bahasa tetap di baris atas, kanan */
   .lang-toggle {
     align-self: flex-end;
   }
 
-  /* nav links di baris kedua, bisa scroll horizontal */
   .nav-links {
     order: 3;
     margin-top: 0.1rem;
@@ -779,6 +751,6 @@ body[data-lang="en"] .t-en {
 
   .avatar-frame {
     max-width: 100%;
-    width: 100%; /* full width di HP */
+    width: 100%;
   }
 }
